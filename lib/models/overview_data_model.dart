@@ -12,6 +12,7 @@ class OverviewData {
   final String amountChange;
   final Color color;
   final Color textColor;
+  final bool loss;
 
   OverviewData({
     required this.title,
@@ -22,6 +23,7 @@ class OverviewData {
     required this.amountChange,
     required this.color,
     required this.textColor,
+    this.loss = false,
   });
 }
 
@@ -41,10 +43,11 @@ List overviewDataDetails = [
     arrow: downArrow,
     title: spendings,
     amount: "\$169.43",
-    color: red,
+    color: redBG,
     percentChange: "3.1%",
     amountChange: "-\$5.2",
     textColor: red,
+    loss: true,
   ),
   OverviewData(
     icon: piggybank,
@@ -54,7 +57,7 @@ List overviewDataDetails = [
     color: backgroundgreen,
     percentChange: "8.2%",
     amountChange: "+\$33.3",
-    textColor: blue,
+    textColor: green,
   ),
   OverviewData(
     icon: investment,

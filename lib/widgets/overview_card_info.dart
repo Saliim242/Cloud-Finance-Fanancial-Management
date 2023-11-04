@@ -61,12 +61,12 @@ class OverViewInfoCard extends StatelessWidget {
                     Icon(
                       data.arrow,
                       size: 15,
-                      color: data.textColor,
+                      color: data.loss ? white : data.textColor,
                     ),
                     Text(
                       "${data.percentChange}",
                       style: TextStyle(
-                        color: data.textColor,
+                        color: data.loss ? white : data.textColor,
                         fontWeight: FontWeight.bold,
                         fontSize: 13,
                       ),
@@ -78,21 +78,22 @@ class OverViewInfoCard extends StatelessWidget {
           ),
           RichText(
             text: TextSpan(
-                text: '${data.amountChange}',
-                style: TextStyle(
-                  color: data.textColor,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 14,
-                ),
-                children: [
-                  TextSpan(
-                    text: ' than last month',
-                    style: const TextStyle(
-                      color: grey,
-                      fontSize: 13,
-                    ),
-                  )
-                ]),
+              text: '${data.amountChange}',
+              style: TextStyle(
+                color: data.textColor,
+                fontWeight: FontWeight.bold,
+                fontSize: 13,
+              ),
+              children: [
+                TextSpan(
+                  text: ' than last month',
+                  style: const TextStyle(
+                    color: grey,
+                    fontSize: 13,
+                  ),
+                )
+              ],
+            ),
           ),
         ],
       ),

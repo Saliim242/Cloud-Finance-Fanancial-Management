@@ -2,6 +2,7 @@ import 'package:cloud_finance_fanancial_management/constants/colors.dart';
 import 'package:cloud_finance_fanancial_management/constants/icons.dart';
 import 'package:flutter/material.dart';
 
+import '../widgets/bar_chats.dart';
 import '../widgets/header_desktop.dart';
 import '../widgets/overview_card_info.dart';
 import '../widgets/overview_section_parts.dart';
@@ -17,6 +18,7 @@ class DesktopScreen extends StatefulWidget {
 class _DesktopScreenState extends State<DesktopScreen> {
   int selectedIndex = 0;
   int gen = 0;
+
   void _handleTileTap(int index) {
     setState(() {
       selectedIndex = index;
@@ -48,6 +50,8 @@ class _DesktopScreenState extends State<DesktopScreen> {
     return Scaffold(
       body: SafeArea(
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Expanded(
               child: Container(
@@ -125,11 +129,14 @@ class _DesktopScreenState extends State<DesktopScreen> {
             ),
             Expanded(
               flex: 5,
-              child: Column(
-                children: [
-                  HeaderDesktop(),
-                  OverViewSectionPart(),
-                ],
+              child: SingleChildScrollView(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    HeaderDesktop(),
+                    OverViewSectionPart(),
+                  ],
+                ),
               ),
             ),
           ],

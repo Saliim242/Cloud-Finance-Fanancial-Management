@@ -9,4 +9,6 @@ const Color green = Color(0xFF65c382);
 const Color backgroundgreen = Color(0xFFe6f5eb);
 const Color grey = Color(0xffadaeb1);
 const Color red = Color(0xffee3939);
+const Color redBG = Color(0xffee3939);
+
 const Color transparent = Colors.transparent;

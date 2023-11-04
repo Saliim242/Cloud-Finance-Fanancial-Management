@@ -24,6 +24,7 @@ class SideMenu extends StatelessWidget {
       onTap: onTap,
       child: Container(
         //margin: EdgeInsets.only(bottom: 8),
+
         padding: EdgeInsets.all(10),
         decoration: BoxDecoration(
           color: isSelected! ? blue : transparent,
